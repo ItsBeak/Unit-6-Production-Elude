@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
     // Can the player jump
@@ -102,6 +101,7 @@ public class Player : MonoBehaviour
             bounce = true;
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y += Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
+            Debug.Log("Boing");
         }
     }
 

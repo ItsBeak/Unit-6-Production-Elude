@@ -8,17 +8,13 @@ public class MakeGoBoing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.localScale = new Vector3(transform.localScale.x, 0.1f /transform.parent.localScale.y, transform.localScale.z);
+        transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y), 0);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        other.gameObject.GetComponent<Rigidbody>().AddForce(0, boingHeight, 0, ForceMode.Impulse);
     }
 }
