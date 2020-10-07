@@ -9,7 +9,7 @@ public class MakeGoBoing : MonoBehaviour
     void Start()
     {
         transform.localScale = new Vector3(transform.localScale.x, 0.1f /transform.parent.localScale.y, transform.localScale.z);
-        transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y), 0);
+        transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y) + transform.parent.localScale.y/2, 0);
     }
 
     // Update is called once per frame

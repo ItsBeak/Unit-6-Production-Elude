@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8955499506365416671}
   - component: {fileID: 291979146735002545}
   m_Layer: 0
-  m_Name: Bouncy
+  m_Name: Bounce Trigger
   m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
