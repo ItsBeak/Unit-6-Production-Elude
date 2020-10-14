@@ -131,6 +131,15 @@ public class Player : MonoBehaviour
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y += Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
         }
+        else if (other.gameObject.tag == "Targeted Bounce")
+        {
+            Transform temp = other.gameObject.transform.parent.GetChild(1);
+            settingsParabola.transform.GetChild(0).position = temp.GetChild(0).position;
+            settingsParabola.transform.GetChild(1).position = temp.GetChild(1).position;
+            settingsParabola.transform.GetChild(2).position = temp.GetChild(2).position;
+            isBouncing = true;
+            parabolaController.FollowParabola();
+        }
         // Finish refers to the arc of the parabola, I should change that later
         else if (other.gameObject.tag == "Finish")
         {

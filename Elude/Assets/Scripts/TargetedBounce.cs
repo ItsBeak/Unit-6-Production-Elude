@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetedBounce : MonoBehaviour
 {
     // The second child of the mushrooms
+    Transform trigger;
     Transform child;
     Player player;
 
@@ -12,29 +13,10 @@ public class TargetedBounce : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        child = transform.parent.GetChild(1);
+        trigger = transform.GetChild(0);
+        child = transform.GetChild(1);
         // Makes the trigger appear in the right spot
-        transform.localScale = new Vector3(transform.localScale.x, 0.1f / transform.parent.localScale.y, transform.localScale.z);
-        transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y) + transform.parent.localScale.y / 2, 0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            // Set the players parabola to that of the mushroom and go
-            player = other.GetComponent<Player>();
-            player.settingsParabola.transform.GetChild(0).position = child.GetChild(0).position;
-            player.settingsParabola.transform.GetChild(1).position = child.GetChild(1).position;
-            player.settingsParabola.transform.GetChild(2).position = child.GetChild(2).position;
-            player.isBouncing = true;
-            player.parabolaController.FollowParabola();
-        }
+        trigger.localScale = new Vector3(trigger.localScale.x, 0.1f / trigger.parent.localScale.y, trigger.localScale.z);
+        trigger.localPosition = new Vector3(0, (0.1f / trigger.parent.localScale.y) + trigger.parent.localScale.y / 2, 0);
     }
 }
