@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     // Is the player currently climbing
     bool isClimbing = false;
     // Is the player using a bounce pad
-    public bool isBouncing = false;
+    bool isBouncing = false;
+    bool controlsLocked = false;
     // Is the player alive
     bool isAlive = true;
     // How high the player can jump
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
     // 
     void Update()
     {
-        if (isBouncing)
+        if (controlsLocked)
         {
             return;
             
@@ -137,13 +138,13 @@ public class Player : MonoBehaviour
             settingsParabola.transform.GetChild(0).position = temp.GetChild(0).position;
             settingsParabola.transform.GetChild(1).position = temp.GetChild(1).position;
             settingsParabola.transform.GetChild(2).position = temp.GetChild(2).position;
-            isBouncing = true;
+            controlsLocked = true;
             parabolaController.FollowParabola();
         }
         // Finish refers to the arc of the parabola, I should change that later
         else if (other.gameObject.tag == "Finish")
         {
-            isBouncing = false;
+            controlsLocked = false;
         }
     }
 
