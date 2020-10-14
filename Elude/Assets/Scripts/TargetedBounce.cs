@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class TargetedBounce : MonoBehaviour
 {
-    public Vector3 Target;
+    public Vector3 target;
+    Transform root;
+    Transform startPoint;
+    Transform maxPoint;
+    Transform endPoint;
+    Transform child;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = new Vector3(transform.localScale.x, 0.1f / transform.parent.localScale.y, transform.localScale.z);
-        transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y) + transform.parent.localScale.y / 2, 0);
+        child = transform.GetChild(0);
+        child.localScale = new Vector3(child.localScale.x, 0.1f / child.parent.localScale.y, child.localScale.z);
+        child.localPosition = new Vector3(0, (0.1f / child.parent.localScale.y) + child.parent.localScale.y / 2, 0);
     }
 
     // Update is called once per frame
