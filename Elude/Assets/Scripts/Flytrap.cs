@@ -69,6 +69,8 @@ public class Flytrap : MonoBehaviour
             //Hides the player
             player.GetComponent<MeshRenderer>().enabled = false;
 
+            player.GetComponent<CharacterController>().enabled = false;
+
             if (fadeTimer <= 0)
             {
 
@@ -82,6 +84,9 @@ public class Flytrap : MonoBehaviour
                 //Resets the variables
                 runFlytrapSequence = false;
                 isPlayerCaught = false;
+
+                player.GetComponent<CharacterController>().enabled = true;
+
 
             }
         }
