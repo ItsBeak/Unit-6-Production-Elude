@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     // Instance of MakeGoBoing script
     MakeGoBoing makeGoBoing;
     // Instance of ParabolaController
-    [HideInInspector] public ParabolaController parabolaController;
+    ParabolaController parabolaController;
     // The parabola that actually effects the player
     public GameObject settingsParabola;
     // Start is called before the first frame update
@@ -47,7 +47,11 @@ public class Player : MonoBehaviour
     {
         if (controlsLocked)
         {
-            return;
+            if (!(settingsParabola.transform.position == transform.position))
+            {
+                return;
+            }
+            controlsLocked = false;
             
         }
         if (!isAlive)
@@ -134,7 +138,8 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.tag == "Targeted Bounce")
         {
-            Transform temp = other.gameObject.transform.parent.GetChild(1);
+            Transform temp = other.transform.parent.GetChild(1);
+            settingsParabola.transform.position = temp.position;
             settingsParabola.transform.GetChild(0).position = temp.GetChild(0).position;
             settingsParabola.transform.GetChild(1).position = temp.GetChild(1).position;
             settingsParabola.transform.GetChild(2).position = temp.GetChild(2).position;

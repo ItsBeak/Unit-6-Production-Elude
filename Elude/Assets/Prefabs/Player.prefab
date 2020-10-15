@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d215ff1c3b46a94e936e7b7cf7facd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBouncing: 0
   jumpHeight: 10
   climbSpeed: 5
   playerSpeed: 6
