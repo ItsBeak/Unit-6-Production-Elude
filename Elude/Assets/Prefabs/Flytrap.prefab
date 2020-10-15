@@ -255,6 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapTimer: 3
   gameManager: {fileID: 0}
-  outputLocation: {fileID: 0}
+  outputLocation: {fileID: 2141006657793042898}
   player: {fileID: 0}
   fadePanel: {fileID: 0}

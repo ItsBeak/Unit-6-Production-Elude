@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class GameManager : MonoBehaviour
 {
 
     public bool toggleTimer = false;
 
-    public float timer;
-    private float internalTimer;
+    //public float timer;
+    //private float internalTimer;
 
     public Player player;
 
     private bool isGamePaused;
     public GameObject pauseMenu;
 
+    private SceneSwitcher sw;
+
     private void Start()
     {
-        internalTimer = timer;
+        //internalTimer = timer;
         isGamePaused = false;
     }
 
@@ -26,16 +30,16 @@ public class GameManager : MonoBehaviour
 
         #region Timer (Scrapped)
 
-        if (toggleTimer)
-        {
-            internalTimer -= Time.deltaTime;
-        }
-        if (internalTimer <= 0f)
-        {
-            toggleTimer = false;
-            internalTimer = timer;
-            GameOver();
-        }
+        //if (toggleTimer)
+        //{
+        //    internalTimer -= Time.deltaTime;
+        //}
+        //if (internalTimer <= 0f)
+        //{
+        //    toggleTimer = false;
+        //    internalTimer = timer;
+        //    GameOver();
+        //}
 
         #endregion
 
@@ -62,11 +66,27 @@ public class GameManager : MonoBehaviour
 
         #endregion
 
+        if (Input.GetKeyDown(KeyCode.O) == true)
+        {
+            GameOver();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P) == true)
+        {
+            WinGame();
+        }
+
     }
 
     public void GameOver()
     {
-        //Needs scene transition to game over scene
+        GetComponent<SceneSwitcher>().sceneName = "LoseMenu";
+        GetComponent<SceneSwitcher>().ToggleSceneChange();
+    }
+    public void WinGame()
+    {
+        GetComponent<SceneSwitcher>().sceneName = "WinMenu";
+        GetComponent<SceneSwitcher>().ToggleSceneChange();
     }
 
 

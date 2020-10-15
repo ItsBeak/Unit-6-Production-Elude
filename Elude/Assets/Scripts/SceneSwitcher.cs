@@ -11,7 +11,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public Image fadePanel;
 
-    private bool isFading;
+    private bool toggleChange;
 
     public string sceneName;
 
@@ -19,16 +19,16 @@ public class SceneSwitcher : MonoBehaviour
 
     void Start()
     {
-        isFading = false;
+        toggleChange = false;
         fadeTimer = 2;
         fadePanel.color = Color.black;
         fadePanel.CrossFadeAlpha(0, 1f, false);
-        fadePanel.gameObject.SetActive(false);
+        fadePanel.gameObject.SetActive(true);
     }
 
     void Update()
     {
-        if (isFading)
+        if (toggleChange)
         {
             fadeTimer -= Time.deltaTime;
             fadePanel.CrossFadeAlpha(1, 0.5f, false);
@@ -44,11 +44,16 @@ public class SceneSwitcher : MonoBehaviour
 
     }
 
-    public void ButtonPressed()
+    public void ToggleSceneChange()
     {
-        isFading = true;
+        toggleChange = true;
         fadePanel.gameObject.SetActive(true);
         fadePanel.CrossFadeAlpha(0, 0f, false);
 
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

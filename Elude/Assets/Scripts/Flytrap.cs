@@ -15,8 +15,6 @@ public class Flytrap : MonoBehaviour
 
     private bool runFlytrapSequence = false;
 
-    public GameManager gameManager;
-
     public GameObject outputLocation;
     public GameObject player;
 
@@ -28,6 +26,7 @@ public class Flytrap : MonoBehaviour
         fadeTimer = 0;
         fadePanel.color = Color.black;
         fadePanel.CrossFadeAlpha(0, 1f, false);
+
     }
 
     private void OnTriggerEnter(Collider other)
