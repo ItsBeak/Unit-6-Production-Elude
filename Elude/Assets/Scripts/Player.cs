@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
         parabolaController = GetComponent<ParabolaController>();
         startPos = transform.position;
        parabolaController.Speed *= playerSpeed;
+        transform.position = startPos;
     }
 
     // Update is called once per frame
