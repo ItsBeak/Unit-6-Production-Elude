@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public float climbSpeed;
     // How fast the player can move
     public float playerSpeed;
+    // Combination of rotate and potato, only here to be accessed by camera
+    [HideInInspector] public float rotato;
+    public float mouseSensitivity;
     //The players velocity, utalized by jump and bounce mechanics
     Vector3 playerVelocity;
     // The direction the player is moving in
@@ -72,8 +75,9 @@ public class Player : MonoBehaviour
             playerVelocity.y = 0.0f;
         }
 
+
         // Regular movment
-        moveDirection = new Vector3(Input.GetAxis("Horizontal") * playerSpeed, 0, isClimbing ? 0 : Input.GetAxis("Vertical") * playerSpeed);
+        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * playerSpeed, 0, isClimbing ? 0 : Input.GetAxis("Vertical") * playerSpeed));
         // Can the player jump
         if (Input.GetButtonDown("Jump") && canJump)
         {
@@ -105,7 +109,8 @@ public class Player : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         // For Forces (bouncing)
         controller.Move(playerVelocity * Time.deltaTime);
-
+        rotato = Input.GetAxis("Mouse X") * mouseSensitivity;
+        transform.Rotate(new Vector3(0, rotato, 0));
     }
     
 
@@ -141,7 +146,7 @@ public class Player : MonoBehaviour
         {
             Transform temp = other.transform.parent.GetChild(1);
             settingsParabola.transform.position = temp.position;
-            settingsParabola.transform.GetChild(0).position = temp.GetChild(0).position;
+            settingsParabola.transform.GetChild(0).position = transform.position;
             settingsParabola.transform.GetChild(1).position = temp.GetChild(1).position;
             settingsParabola.transform.GetChild(2).position = temp.GetChild(2).position;
             controlsLocked = true;
