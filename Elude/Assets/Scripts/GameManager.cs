@@ -19,10 +19,14 @@ public class GameManager : MonoBehaviour
 
     private SceneSwitcher sw;
 
+    public int collectibleCounter;
+    public int collectibleTarget;
+
     private void Start()
     {
         //internalTimer = timer;
         isGamePaused = false;
+        collectibleCounter = 0;
     }
 
     void Update()
@@ -66,15 +70,23 @@ public class GameManager : MonoBehaviour
 
         #endregion
 
+        // FOR BUG TESTING -- TEMPORARY
         if (Input.GetKeyDown(KeyCode.O) == true)
         {
             GameOver();
         }
 
+        // FOR BUG TESTING -- TEMPORARY
         if (Input.GetKeyDown(KeyCode.P) == true)
         {
             WinGame();
         }
+
+        if (collectibleCounter == collectibleTarget)
+        {
+            // open door
+        }
+
 
     }
 
