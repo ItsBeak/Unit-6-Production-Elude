@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class Flytrap : MonoBehaviour
 {
-    public float snapTimer = 5;
-    private float timer;
-    private float fadeTimer;
+    
+    public float snapTimer = 5;         // The timer that can be modified within the inspector in Unity
+    private float timer;                // The internal timer that is used within code, references its public counterpart
+    private float fadeTimer;            // Used in the fade in / out when caught
 
-    private bool isTriggered;
-    private bool isInMouth;
-    private bool isPlayerCaught = false;
+    private bool isTriggered;           // Toggles when the player first triggers the flytrap
+    private bool isInMouth;             // Is true whenever the player is inside the mouth
 
-    private bool runFlytrapSequence = false;
+    private bool runFlytrapSequence = false;    // Will run the flytraps sequence if toggled
 
-    public GameObject outputLocation;
-    public GameObject player;
+    public GameObject outputLocation;   // The output location of the flytrap
+    public GameObject player;           // A reference to the player
 
-    public Image fadePanel; 
+    public Image fadePanel;             // The black panel that fades in / out when the player is caught
 
     private void Start()
     {
@@ -35,33 +35,30 @@ public class Flytrap : MonoBehaviour
         {
             isInMouth = true;
 
-            if (isTriggered == false)
+            if (isTriggered == false) // Checks if the flytrap has been triggered, if it hasn't, it will trigger
             {
                 timer = snapTimer;
-
                 isTriggered = true;
             }
-
         }
     }
     void Update()
     {
 
-        if (timer >= 0 && isTriggered == true)
+        if (timer >= 0 && isTriggered == true) // Ticks down the timer once triggered
         {
             timer -= Time.deltaTime;
         }
 
-        if (timer <= 0 && isInMouth == true && isTriggered == true)
+        if (timer <= 0 && isInMouth == true && isTriggered == true) // Checks if the player is in the mouth of the trap when the timer runs out
         {
             PlayerCaught();
         }
 
-        if (timer <= 0 && isPlayerCaught == false )
+        if (timer <= 0) // Resets the trap when the timer runs out
         {
             isTriggered = false;
         }
-
 
         if (runFlytrapSequence == true)
         {
@@ -82,7 +79,6 @@ public class Flytrap : MonoBehaviour
 
                 //Resets the variables
                 runFlytrapSequence = false;
-                isPlayerCaught = false;
 
                 player.GetComponent<CharacterController>().enabled = true;
 
@@ -117,7 +113,6 @@ public class Flytrap : MonoBehaviour
         fadePanel.CrossFadeAlpha(1, 1f, false);
 
         //Reset flytrap
-        isPlayerCaught = true;
         isTriggered = false;
         runFlytrapSequence = true;
     }
