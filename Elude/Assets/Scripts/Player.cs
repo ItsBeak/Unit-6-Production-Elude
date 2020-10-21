@@ -53,9 +53,15 @@ public class Player : MonoBehaviour
         {
             if (!(settingsParabola.transform.position == transform.position))
             {
+                rotato = Input.GetAxis("Mouse X") * mouseSensitivity;
+                transform.Rotate(new Vector3(0, rotato, 0));
                 return;
             }
-            controlsLocked = false;
+            else
+            {
+                controlsLocked = false;
+            }
+            
             
         }
         if (!isAlive)
