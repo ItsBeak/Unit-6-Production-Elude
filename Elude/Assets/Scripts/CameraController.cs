@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
             localRotation.y = 90f;
     
         //Actual Camera Transformations
-        // Test
+        
         Quaternion QT = Quaternion.Euler(localRotation.y, player.transform.rotation.y, 0);
         parent.rotation = Quaternion.Lerp(parent.rotation, QT, Time.deltaTime * orbitDampening);
     }
