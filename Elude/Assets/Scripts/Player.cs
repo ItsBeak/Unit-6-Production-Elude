@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     bool isClimbing = false;
     // Is the player using a bounce pad
     bool isBouncing = false;
+    // Are the controls locked
     bool controlsLocked = false;
     // Is the player alive
     bool isAlive = true;
@@ -18,8 +19,7 @@ public class Player : MonoBehaviour
     public float climbSpeed;
     // How fast the player can move
     public float playerSpeed;
-    // Combination of rotate and potato, only here to be accessed by camera
-    [HideInInspector] public float rotato;
+    // The sensitivity of the mouse
     public float mouseSensitivity;
     //The players velocity, utalized by jump and bounce mechanics
     Vector3 playerVelocity;
@@ -53,8 +53,7 @@ public class Player : MonoBehaviour
         {
             if (!(settingsParabola.transform.position == transform.position))
             {
-                rotato = Input.GetAxis("Mouse X") * mouseSensitivity;
-                transform.Rotate(new Vector3(0, rotato, 0));
+                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0));
                 return;
             }
             else
@@ -115,8 +114,7 @@ public class Player : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         // For Forces (bouncing)
         controller.Move(playerVelocity * Time.deltaTime);
-        rotato = Input.GetAxis("Mouse X") * mouseSensitivity;
-        transform.Rotate(new Vector3(0, rotato, 0));
+        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0));
     }
     
 
