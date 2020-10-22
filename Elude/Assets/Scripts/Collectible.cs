@@ -5,24 +5,14 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
 
-    public GameManager gameManager;
+    public GameManager gameManager;             // A reference to the game manager
 
-
-
-
-    void Start()
-    {
-        
-    }
-
-
-    private void OnTriggerExit(Collider other)
-    {
+    private void OnTriggerExit(Collider other)  // When the player enters the trigger of the collectible, the counter is increased
+    {                                           // by one, and the collectible is deactivated
         if (other.tag == "Player")
         {
-            gameManager.collectibleCounter++;
-            gameObject.SetActive(false);
-
+            gameManager.collectibleCounter++; // Increases counter by one
+            gameObject.SetActive(false); // Disables the collectible
         }
     }
 }

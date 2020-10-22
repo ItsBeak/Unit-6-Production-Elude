@@ -9,15 +9,17 @@ public class GameManager : MonoBehaviour
 
     public bool toggleTimer = false;
 
+    #region Timer (Scrapped)
+
     //public float timer;
     //private float internalTimer;
+
+    #endregion
 
     public Player player;
 
     private bool isGamePaused;
     public GameObject pauseMenu;
-
-    private SceneSwitcher sw;
 
     public int collectibleCounter;
     public int collectibleTarget;
@@ -31,7 +33,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
         #region Timer (Scrapped)
 
         //if (toggleTimer)
@@ -49,19 +50,19 @@ public class GameManager : MonoBehaviour
 
         #region PauseMenu
 
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown("escape"))     // Toggles the pause menu
         {
-            if (isGamePaused == false)
+            if (isGamePaused == false)      // Opens the menu
             {
                 isGamePaused = true;
-                Time.timeScale = 0.0f;
+                Time.timeScale = 0.0f;  // Freezes time
 
                 pauseMenu.SetActive(true);
             }
-            else if (isGamePaused == true)
+            else if (isGamePaused == true)  // Closes the menu
             {
                 isGamePaused = false;
-                Time.timeScale = 1.0f;
+                Time.timeScale = 1.0f;  // Unfreezes Time
 
                 pauseMenu.SetActive(false);
 
@@ -75,9 +76,7 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
-
-        // FOR BUG TESTING -- TEMPORARY
-        if (Input.GetKeyDown(KeyCode.P) == true)
+        else if (Input.GetKeyDown(KeyCode.P) == true)
         {
             WinGame();
         }
@@ -86,8 +85,6 @@ public class GameManager : MonoBehaviour
         {
             // open door
         }
-
-
     }
 
     public void GameOver()
@@ -100,6 +97,4 @@ public class GameManager : MonoBehaviour
         GetComponent<SceneSwitcher>().sceneName = "WinMenu";
         GetComponent<SceneSwitcher>().ToggleSceneChange();
     }
-
-
 }
