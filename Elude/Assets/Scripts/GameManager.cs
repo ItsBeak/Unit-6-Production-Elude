@@ -9,18 +9,22 @@ public class GameManager : MonoBehaviour
 
     public bool toggleTimer = false;
 
+    #region Timer (Scrapped)
+
     //public float timer;
     //private float internalTimer;
+
+    #endregion
 
     public Player player;
 
     private bool isGamePaused;
     public GameObject pauseMenu;
 
-    private SceneSwitcher sw;
-
     public int collectibleCounter;
     public int collectibleTarget;
+
+    public GameObject door;
 
     private void Start()
     {
@@ -31,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
         #region Timer (Scrapped)
 
         //if (toggleTimer)
@@ -49,45 +52,37 @@ public class GameManager : MonoBehaviour
 
         #region PauseMenu
 
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown("escape"))     // Toggles the pause menu
         {
-            if (isGamePaused == false)
+            if (isGamePaused == false)      // Opens the menu
             {
                 isGamePaused = true;
-                Time.timeScale = 0.0f;
-
-                pauseMenu.SetActive(true);
             }
-            else if (isGamePaused == true)
+            else if (isGamePaused == true)  // Closes the menu
             {
                 isGamePaused = false;
-                Time.timeScale = 1.0f;
-
-                pauseMenu.SetActive(false);
-
             }
+        }
+
+        if (isGamePaused == true)
+        {
+            Time.timeScale = 0.0f;  
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else if (isGamePaused == false)  
+        {
+            Time.timeScale = 1.0f; 
+            pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         #endregion
 
-        // FOR BUG TESTING -- TEMPORARY
-        if (Input.GetKeyDown(KeyCode.O) == true)
-        {
-            GameOver();
-        }
-
-        // FOR BUG TESTING -- TEMPORARY
-        if (Input.GetKeyDown(KeyCode.P) == true)
-        {
-            WinGame();
-        }
-
         if (collectibleCounter == collectibleTarget)
         {
-            // open door
+            door.SetActive(false);
         }
-
-
     }
 
     public void GameOver()
@@ -100,6 +95,12 @@ public class GameManager : MonoBehaviour
         GetComponent<SceneSwitcher>().sceneName = "WinMenu";
         GetComponent<SceneSwitcher>().ToggleSceneChange();
     }
-
-
+    public void Resume()
+    {
+        isGamePaused = false;
+    }
+    public void ExitGame() // Closes the game
+    {
+        Application.Quit();
+    }
 }

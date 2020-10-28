@@ -15,23 +15,23 @@ public class TriggerTool : MonoBehaviour
     public OnCompletion onCompletion;
 
     [Header("Objects - NOT ALL ARE NEEDED")]
-    public GameObject targetObject;
-    public GameObject destination;
-    public GameObject instantiatedObject;
+    public GameObject targetObject;         // The target object to be activated / deactivated
+    public GameObject destination;          // The location at which an object will be instantiated
+    public GameObject instantiatedObject;   // The object to instantiate
 
     private void OnTriggerEnter(Collider other)
     {
-        if (enable)
+        if (enable) // Checks if the trigger is enabled
         {
-            if (onTrigger == TriggerType.enableObject)
+            if (onTrigger == TriggerType.enableObject) // Activates the target object upon triggering
             {
                 targetObject.gameObject.SetActive(true);
             }
-            else if (onTrigger == TriggerType.disableObject)
+            else if (onTrigger == TriggerType.disableObject) // Deactivated the target object upon triggering
             {
                 targetObject.gameObject.SetActive(false);
             }
-            else if (onTrigger == TriggerType.instantiateObject)
+            else if (onTrigger == TriggerType.instantiateObject) // Spawns a new object at a destination upon triggering
             {
                 Instantiate(instantiatedObject, destination.transform);
             }
@@ -40,7 +40,7 @@ public class TriggerTool : MonoBehaviour
             {
                 // do nothing ( ͡° ͜ʖ ͡°)
             }
-            else if (onCompletion == OnCompletion.disableTrigger)
+            else if (onCompletion == OnCompletion.disableTrigger) // If toggled, will disable the trigger after running once.
             {
                 this.gameObject.SetActive(false);
             }
