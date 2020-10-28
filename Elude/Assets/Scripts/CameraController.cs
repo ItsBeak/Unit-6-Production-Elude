@@ -32,10 +32,10 @@ public class CameraController : MonoBehaviour
         localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity; 
 
         //Clamp the y Rotation to horizon and not flipping over at the top
-        if (localRotation.y < 0f)
-            localRotation.y = 0f;
-        else if (localRotation.y > 90f)
-            localRotation.y = 90f;
+       // if (localRotation.y < 0f)
+       //     localRotation.y = 0f;
+       // else if (localRotation.y > 90f)
+       //     localRotation.y = 90f;
     
         //Actual Camera Transformations
         Quaternion QT = Quaternion.Euler(localRotation.y, localRotation.x, 0);
