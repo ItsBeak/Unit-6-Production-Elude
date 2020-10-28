@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public int collectibleCounter;
     public int collectibleTarget;
 
+    public GameObject door;
+
     private void Start()
     {
         //internalTimer = timer;
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
 
         if (collectibleCounter == collectibleTarget)
         {
-            // open door
+            door.SetActive(false);
         }
     }
 

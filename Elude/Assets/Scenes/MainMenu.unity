@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTimer: 2
   fadePanel: {fileID: 1012786248}
-  sceneName: Testing Scene
+  sceneName: TechnicalLevel
 --- !u!114 &867117463
 MonoBehaviour:
   m_ObjectHideFlags: 0

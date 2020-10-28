@@ -63,7 +63,7 @@ public class Flytrap : MonoBehaviour
         if (runFlytrapSequence == true)
         {
             //Hides the player
-            player.GetComponent<MeshRenderer>().enabled = false;
+            player.GetComponentInChildren<MeshRenderer>().enabled = false;
 
             player.GetComponent<CharacterController>().enabled = false;
 
@@ -75,7 +75,7 @@ public class Flytrap : MonoBehaviour
                 fadePanel.CrossFadeAlpha(0, 1f, false);
 
                 //Shows the player
-                player.GetComponent<MeshRenderer>().enabled = true;
+                player.GetComponentInChildren<MeshRenderer>().enabled = true;
 
                 //Resets the variables
                 runFlytrapSequence = false;
