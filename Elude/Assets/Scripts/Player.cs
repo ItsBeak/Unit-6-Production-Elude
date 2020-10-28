@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
             canJump = true;
             isBouncing = false;
         }
-        if (controller.isGrounded && !isBouncing)
+        if (canJump && !isBouncing)
         {
             playerVelocity.y = 0.0f;
         }
@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
         {
             isBouncing = true;
             makeGoBoing = other.GetComponent<MakeGoBoing>();
-            playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
+            playerVelocity.y += Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
         }
         else if (other.gameObject.tag == "Targeted Bounce")
         {

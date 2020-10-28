@@ -57,31 +57,27 @@ public class GameManager : MonoBehaviour
             if (isGamePaused == false)      // Opens the menu
             {
                 isGamePaused = true;
-                Time.timeScale = 0.0f;  // Freezes time
-
-                pauseMenu.SetActive(true);
             }
             else if (isGamePaused == true)  // Closes the menu
             {
                 isGamePaused = false;
-                Time.timeScale = 1.0f;  // Unfreezes Time
-
-                pauseMenu.SetActive(false);
-
             }
         }
 
-        #endregion
+        if (isGamePaused == true)
+        {
+            Time.timeScale = 0.0f;  
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else if (isGamePaused == false)  
+        {
+            Time.timeScale = 1.0f; 
+            pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+        }
 
-        // FOR BUG TESTING -- TEMPORARY
-        if (Input.GetKeyDown(KeyCode.O) == true)
-        {
-            GameOver();
-        }
-        else if (Input.GetKeyDown(KeyCode.P) == true)
-        {
-            WinGame();
-        }
+        #endregion
 
         if (collectibleCounter == collectibleTarget)
         {
@@ -98,5 +94,13 @@ public class GameManager : MonoBehaviour
     {
         GetComponent<SceneSwitcher>().sceneName = "WinMenu";
         GetComponent<SceneSwitcher>().ToggleSceneChange();
+    }
+    public void Resume()
+    {
+        isGamePaused = false;
+    }
+    public void ExitGame() // Closes the game
+    {
+        Application.Quit();
     }
 }
