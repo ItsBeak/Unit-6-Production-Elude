@@ -20,12 +20,16 @@ public class Flytrap : MonoBehaviour
 
     public Image fadePanel;             // The black panel that fades in / out when the player is caught
 
+    AudioSource audioSource;
+    public AudioClip clip;
+
     private void Start()
     {
         timer = snapTimer;
         fadeTimer = 0;
         fadePanel.color = Color.black;
         fadePanel.CrossFadeAlpha(0, 1f, false);
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -66,6 +70,8 @@ public class Flytrap : MonoBehaviour
             player.GetComponentInChildren<MeshRenderer>().enabled = false;
 
             player.GetComponent<CharacterController>().enabled = false;
+
+
 
             if (fadeTimer <= 0)
             {
@@ -111,6 +117,8 @@ public class Flytrap : MonoBehaviour
         // Fades screen to black
         fadeTimer = 1;
         fadePanel.CrossFadeAlpha(1, 1f, false);
+
+        audioSource.PlayOneShot(clip, 0.1f); // Play the chomp sound
 
         //Reset flytrap
         isTriggered = false;
