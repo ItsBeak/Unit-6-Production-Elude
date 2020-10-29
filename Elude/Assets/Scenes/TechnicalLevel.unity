@@ -5668,7 +5668,7 @@ PrefabInstance:
     - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.04
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -5680,6 +5680,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180.00002
       objectReference: {fileID: 0}
+    - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 423201008894552338, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5688,12 +5693,12 @@ PrefabInstance:
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 81.8
+      value: 80.3
       objectReference: {fileID: 0}
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.22
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -5703,7 +5708,7 @@ PrefabInstance:
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.7
+      value: 83.52
       objectReference: {fileID: 0}
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -6664,7 +6669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &204611638
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7763,7 +7768,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25908
+  m_Name: pb_Mesh65014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9216,7 +9221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &302829799
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18227,7 +18232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 3
 --- !u!64 &599427150
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20799,7 +20804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &647607650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22418,7 +22423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 3
 --- !u!64 &675744051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25265,7 +25270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 3
 --- !u!64 &795518518
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27565,7 +27570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &869059819
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29088,7 +29093,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26936
+  m_Name: pb_Mesh66064
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32080,7 +32085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7762587641252159398}
-  chaseRange: 0
+  chaseRange: 500
   attackRange: 0
   agent: {fileID: 1053172856}
 --- !u!195 &1053172856
@@ -34305,7 +34310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25746
+  m_Name: pb_Mesh64852
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34468,7 +34473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25616
+  m_Name: pb_Mesh64722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37948,7 +37953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &1336983244
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43737,7 +43742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &1499148545
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -45688,7 +45693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &1509151037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48568,7 +48573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 3
 --- !u!64 &1551005504
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50226,7 +50231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26920
+  m_Name: pb_Mesh66048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52891,22 +52896,27 @@ PrefabInstance:
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.795
+      value: 0.839
       objectReference: {fileID: 0}
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 72
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: 0.303
       objectReference: {fileID: 0}
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63.4
+      value: 77.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4462061862861682256, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -54572,7 +54582,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26466
+  m_Name: pb_Mesh65584
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -56731,7 +56741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 2
 --- !u!64 &1820996990
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -64007,7 +64017,7 @@ PrefabInstance:
     - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -64019,6 +64029,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180.00002
       objectReference: {fileID: 0}
+    - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 246292726791772345, guid: 947a5dc5455fe3f49b97770fa87361b7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 423201008894552338, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -64027,12 +64047,12 @@ PrefabInstance:
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 101.9
+      value: 128.9
       objectReference: {fileID: 0}
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.931
+      value: -1.922
       objectReference: {fileID: 0}
     - target: {fileID: 2893231347889964469, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -64042,12 +64062,12 @@ PrefabInstance:
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 86.5
+      value: 91.6
       objectReference: {fileID: 0}
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.775
+      value: -0.212
       objectReference: {fileID: 0}
     - target: {fileID: 3897955686856811743, guid: 947a5dc5455fe3f49b97770fa87361b7,
         type: 3}
@@ -64198,7 +64218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb5e1f440093144b3f07f7bc121ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boingHeight: 5
+  boingHeight: 3
 --- !u!64 &1989436660
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65770,7 +65790,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25990
+  m_Name: pb_Mesh65096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -83476,7 +83496,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.4
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -108911,7 +108931,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 1.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
