@@ -104,11 +104,6 @@ public class Player : MonoBehaviour
                 moveDirection.y += Input.GetAxis("Vertical") * climbSpeed;
             }
         }
-        else
-        {
-            //gravity for when player is not climbing
-            moveDirection += Physics.gravity;
-        }
         playerVelocity.y += Physics.gravity.y * Time.deltaTime;
         // For Movement
         controller.Move(moveDirection * Time.deltaTime);
@@ -146,6 +141,7 @@ public class Player : MonoBehaviour
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
         }
+        // Bounce player and lock controls
         else if (other.gameObject.tag == "Targeted Bounce")
         {
             Transform temp = other.transform.parent.GetChild(1);
