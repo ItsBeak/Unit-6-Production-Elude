@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
     bool isBouncing = false;
     // Are the controls locked
     bool controlsLocked = false;
-    // Is the player alive
-    bool isAlive = true;
     // How high the player can jump
     public float jumpHeight;
     // How fast the player can climb
@@ -21,6 +19,8 @@ public class Player : MonoBehaviour
     public float playerSpeed;
     // The sensitivity of the mouse
     public float mouseSensitivity;
+    // Distance between the player and pursuer before death
+    public float deathRange;
     //The players velocity, utalized by jump and bounce mechanics
     Vector3 playerVelocity;
     // The direction the player is moving in
@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     ParabolaController parabolaController;
     // The parabola that actually effects the player
     public GameObject settingsParabola;
+    // The lose condition
+    public GameObject pursuer;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,12 @@ public class Player : MonoBehaviour
     // 
     void Update()
     {
+        if (PursuerIsClose())
+        {
+            GetComponent<SceneSwitcher>().sceneName = "LoseMenu";
+            Cursor.lockState = CursorLockMode.Confined;
+            GetComponent<SceneSwitcher>().ToggleSceneChange();
+        }
         if (controlsLocked)
         {
             if (!(settingsParabola.transform.position == transform.position))
@@ -62,13 +70,6 @@ public class Player : MonoBehaviour
             }
             
             
-        }
-        if (!isAlive)
-        {
-            //Do death
-            gameObject.SetActive(false);
-            transform.position = startPos;
-            gameObject.SetActive(true);
         }
         if (isClimbing || controller.isGrounded)
         {
@@ -157,6 +158,22 @@ public class Player : MonoBehaviour
         {
             controlsLocked = false;
         }
+        else if( other.gameObject.tag == "WinGame")
+        {
+            GetComponent<SceneSwitcher>().sceneName = "WinMenu";
+            Cursor.lockState = CursorLockMode.Confined;
+            GetComponent<SceneSwitcher>().ToggleSceneChange();
+        }
     }
 
+    bool PursuerIsClose()
+    {
+        Vector3 difference = new Vector3(Mathf.Abs(pursuer.transform.position.x - transform.position.x), Mathf.Abs(pursuer.transform.position.y - transform.position.y), Mathf.Abs(pursuer.transform.position.z - transform.position.z));
+        if (difference.x < deathRange && difference.y < deathRange && difference.z < deathRange)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

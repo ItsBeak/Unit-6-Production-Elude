@@ -50,34 +50,13 @@ public class GameManager : MonoBehaviour
 
         #endregion
 
-        #region PauseMenu
+        
 
         if (Input.GetKeyDown("escape"))     // Toggles the pause menu
         {
-            if (isGamePaused == false)      // Opens the menu
-            {
-                isGamePaused = true;
-            }
-            else if (isGamePaused == true)  // Closes the menu
-            {
-                isGamePaused = false;
-            }
+            Pause();
         }
 
-        if (isGamePaused == true)
-        {
-            Time.timeScale = 0.0f;  
-            pauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.Confined;
-        }
-        else if (isGamePaused == false)  
-        {
-            Time.timeScale = 1.0f; 
-            pauseMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        #endregion
 
         if (collectibleCounter == collectibleTarget)
         {
@@ -102,5 +81,30 @@ public class GameManager : MonoBehaviour
     public void ExitGame() // Closes the game
     {
         Application.Quit();
+    }
+
+    public void Pause()
+    {
+        if (isGamePaused == false)      // Opens the menu
+        {
+            isGamePaused = true;
+        }
+        else if (isGamePaused == true)  // Closes the menu
+        {
+            isGamePaused = false;
+        }
+
+        if (isGamePaused == true)
+        {
+            Time.timeScale = 0.0f;
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else if (isGamePaused == false)
+        {
+            Time.timeScale = 1.0f;
+            pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
