@@ -60,7 +60,9 @@ public class GameManager : MonoBehaviour
 
         if (collectibleCounter == collectibleTarget)
         {
-            door.SetActive(false);
+
+            door.GetComponent<Door_Open_Anim_Script>().cogsmet = true;
+
         }
     }
 

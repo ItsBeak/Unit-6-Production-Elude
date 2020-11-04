@@ -9,6 +9,8 @@ public class Collectible : MonoBehaviour
     AudioSource audioSource;
     public AudioClip clip;
 
+    public GameObject wallCog;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,6 +30,7 @@ public class Collectible : MonoBehaviour
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = false; // Hides the mesh of the collectible
             gameObject.GetComponentInChildren<Light>().enabled = false; // Disables the light
 
+            wallCog.SetActive(true);    //Activates a cog on the wall
 
         }
     }
