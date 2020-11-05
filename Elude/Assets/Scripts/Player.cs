@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 
 
         // Regular movment
-        moveDirection = transform.TransformDirection(new Vector3(Input.GetAxis("Horizontal") * playerSpeed, 0, isClimbing ? 0 : Input.GetAxis("Vertical") * playerSpeed));
+        moveDirection = transform.TransformDirection(new Vector3(0, 0, isClimbing ? 0 : Input.GetAxis("Vertical") * playerSpeed));
         // Can the player jump
         if (Input.GetButtonDown("Jump") && canJump)
         {
@@ -98,6 +98,10 @@ public class Player : MonoBehaviour
         // Is the player Climbing
         if (isClimbing)
         {
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                moveDirection.x += Input.GetAxis("Horizontal") * playerSpeed;
+            }
             // Utilizes Vertical to go up/down instead of forward/backwards
             if (Input.GetAxis("Vertical") != 0)
             {
@@ -110,7 +114,7 @@ public class Player : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         // For Forces (bouncing)
         controller.Move(playerVelocity * Time.deltaTime);
-        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0));
+        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * mouseSensitivity, 0));
     }
     
 
