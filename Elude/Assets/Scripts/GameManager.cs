@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public void Resume()
     {
-        isGamePaused = false;
+        Pause();
     }
     public void ExitGame() // Closes the game
     {
