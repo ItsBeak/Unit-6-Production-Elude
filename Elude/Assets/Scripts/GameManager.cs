@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public int collectibleTarget;
 
     public GameObject door;
+    public GameObject doorAudioSource;
 
     private void Start()
     {
@@ -62,6 +63,8 @@ public class GameManager : MonoBehaviour
         {
 
             door.GetComponent<Door_Open_Anim_Script>().cogsmet = true;
+
+            doorAudioSource.SetActive(true);
 
         }
     }
