@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         //internalTimer = timer;
         isGamePaused = false;
         collectibleCounter = 0;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
