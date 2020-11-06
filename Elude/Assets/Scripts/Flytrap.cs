@@ -17,6 +17,7 @@ public class Flytrap : MonoBehaviour
 
     public GameObject outputLocation;   // The output location of the flytrap
     public GameObject player;           // A reference to the player
+    public GameObject playerMesh;      // A reference to the player mesh
 
     public Image fadePanel;             // The black panel that fades in / out when the player is caught
 
@@ -67,7 +68,7 @@ public class Flytrap : MonoBehaviour
         if (runFlytrapSequence == true)
         {
             //Hides the player
-            player.GetComponentInChildren<MeshRenderer>().enabled = false;
+            playerMesh.GetComponent<SkinnedMeshRenderer>().enabled = false;
 
             player.GetComponent<CharacterController>().enabled = false;
 
@@ -81,7 +82,7 @@ public class Flytrap : MonoBehaviour
                 fadePanel.CrossFadeAlpha(0, 1f, false);
 
                 //Shows the player
-                player.GetComponentInChildren<MeshRenderer>().enabled = true;
+                playerMesh.GetComponent<SkinnedMeshRenderer>().enabled = true;
 
                 //Resets the variables
                 runFlytrapSequence = false;
