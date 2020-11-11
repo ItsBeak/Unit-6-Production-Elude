@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
     public GameObject settingsParabola;
     // The lose condition
     public GameObject pursuer;
+
+    // A reference to the animator on the players rig
+    public Animator playerAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,10 +80,13 @@ public class Player : MonoBehaviour
         {
             canJump = true;
             isBouncing = false;
+
         }
         if (controller.isGrounded && !isBouncing)
         {
             playerVelocity.y = 0.0f;
+            playerAnimator.SetBool("Jump", false);
+
         }
 
 
@@ -90,12 +98,29 @@ public class Player : MonoBehaviour
             //Jump
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y);
             canJump = false;
+
+            playerAnimator.SetBool("Jump", true);
+
             if (isClimbing)
             {
                 StopClimbing();
             }
+
         }
-        
+
+        playerAnimator.SetFloat("Falling", Mathf.Round(playerVelocity.y));
+
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            playerAnimator.SetBool("Running", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Running", false);
+
+        }
+
+
         // Is the player Climbing
         if (isClimbing)
         {
