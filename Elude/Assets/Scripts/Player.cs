@@ -76,18 +76,17 @@ public class Player : MonoBehaviour
             
             
         }
+        if (controller.isGrounded && !isBouncing)
+        {
+            playerVelocity.y = 0.0f;
+        }
         if (isClimbing || controller.isGrounded)
         {
             canJump = true;
             isBouncing = false;
 
         }
-        if (controller.isGrounded && !isBouncing)
-        {
-            playerVelocity.y = 0.0f;
-            playerAnimator.SetBool("Jump", false);
-
-        }
+        
 
 
         // Regular movment
@@ -136,7 +135,18 @@ public class Player : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         // For Forces (bouncing)
         controller.Move(playerVelocity * Time.deltaTime);
-        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X")* mouseSensitivity));
+        float rotate = 0;
+        if (Input.GetAxis("Mouse X") != 0)
+        {
+            rotate = Input.GetAxis("Mouse X") * mouseSensitivity;
+        }
+        if (Input.GetAxis("Joystick X") != 0)
+        {
+            rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
+        }
+         
+
+        transform.Rotate(new Vector3(0, rotate));
         
     }
     
@@ -166,6 +176,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.tag == "Bouncy")
         {
             isBouncing = true;
+            canJump = false;
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
         }
