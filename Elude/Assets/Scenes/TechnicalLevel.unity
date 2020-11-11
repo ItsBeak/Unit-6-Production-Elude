@@ -121,6 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 0bd092196739c424d90f2f1fb1e194ad, type: 2}
+--- !u!1 &5505569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6797754488490894997, guid: ca361df1e9bd3d149ab972482ff4abbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 3276250697052103291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5505571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86801fff63331d4c96e106afee9d538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8384490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,6 +2976,7 @@ MonoBehaviour:
   snapTimer: 3
   outputLocation: {fileID: 1830840801}
   player: {fileID: 7762587641252159398}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 603952523}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!65 &114408242
@@ -21238,6 +21257,7 @@ MonoBehaviour:
   snapTimer: 3
   outputLocation: {fileID: 1830840801}
   player: {fileID: 7762587641252159398}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 603952523}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!65 &583297672
@@ -35469,6 +35489,7 @@ MonoBehaviour:
   snapTimer: 3
   outputLocation: {fileID: 1830840801}
   player: {fileID: 7762587641252159398}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 603952523}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!65 &1058010724
@@ -63063,6 +63084,7 @@ MonoBehaviour:
   snapTimer: 3
   outputLocation: {fileID: 1830840801}
   player: {fileID: 7762587641252159398}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 603952523}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!65 &1863859166
@@ -70494,6 +70516,11 @@ PrefabInstance:
       propertyPath: pursuer
       value: 
       objectReference: {fileID: 7000798722484120755}
+    - target: {fileID: 6116868296721969913, guid: ca361df1e9bd3d149ab972482ff4abbe,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca361df1e9bd3d149ab972482ff4abbe, type: 3}
 --- !u!114 &5145004563124357640
@@ -109138,6 +109165,7 @@ MonoBehaviour:
   snapTimer: 3
   outputLocation: {fileID: 1830840801}
   player: {fileID: 7762587641252159398}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 603952523}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!1001 &5380243062850900284
