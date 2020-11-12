@@ -28,14 +28,28 @@ public class CameraController : MonoBehaviour
     {
         transform.parent.position = player.transform.position;
         //Rotation of the Camera based on Mouse Coordinates
-        localRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
-        localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity; 
+        if (Input.GetAxis("Mouse X") != 0)
+        {
+            localRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
+        }
+        if (Input.GetAxis("Joystick X") != 0)
+        {
+            localRotation.x += Input.GetAxis("Joystick X") * mouseSensitivity;
+        }
+        if (Input.GetAxis("Mouse Y") != 0)
+        {
+            localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+        }
+        if (Input.GetAxis("Joystick Y") != 0)
+        {
+            localRotation.y -= Input.GetAxis("Joystick Y") * mouseSensitivity;
+        }
 
         //Clamp the y Rotation to horizon and not flipping over at the top
         if (localRotation.y < -80f)
             localRotation.y = -80f;
-        else if (localRotation.y > 80f)
-            localRotation.y = 80f;
+        else if (localRotation.y > 30f)
+            localRotation.y = 30f;
     
         //Actual Camera Transformations
         Quaternion QT = Quaternion.Euler(localRotation.y, localRotation.x, 0);
