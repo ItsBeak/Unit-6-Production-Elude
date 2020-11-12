@@ -3169,9 +3169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdef6b9e867006948910822fbde25ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapTimer: 3
+  snapTimer: 1.5
   outputLocation: {fileID: 0}
   player: {fileID: 0}
+  playerMesh: {fileID: 0}
   fadePanel: {fileID: 0}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
 --- !u!82 &7669985326748409660

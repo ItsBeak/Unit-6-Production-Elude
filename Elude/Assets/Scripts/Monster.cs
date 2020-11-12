@@ -13,6 +13,10 @@ public class Monster : MonoBehaviour
     Vector3 lastKnownLocation;
     public NavMeshAgent agent;
 
+    public SceneSwitcher switcher;
+    private bool playerIsDead;
+    //public AudioClip catchSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +44,27 @@ public class Monster : MonoBehaviour
 
             if (distanceToTarget < attackRange)
             {
-                return;
+                if (playerIsDead == false)
+                {
+                    playerIsDead = true;
+                    KillPlayer();
+                }
+                
             }
         }
 
     }
+
+    void KillPlayer()
+    {
+        //KILL PLAYER IN HERE
+
+        switcher.ToggleSceneChange();
+
+        //target.GetComponent<Player>().controlsLocked = true;
+
+        //play catch sound
+    }
+
 }
+
