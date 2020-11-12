@@ -68,6 +68,18 @@ public class GameManager : MonoBehaviour
             doorAudioSource.SetActive(true);
 
         }
+
+        if (isGamePaused)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
     }
 
     public void GameOver()
@@ -104,13 +116,13 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0.0f;
             pauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.lockState = CursorLockMode.Confined;
         }
         else if (isGamePaused == false)
         {
             Time.timeScale = 1.0f;
             pauseMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

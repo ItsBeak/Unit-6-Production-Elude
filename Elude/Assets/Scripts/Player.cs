@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
     public GameObject settingsParabola;
     // The lose condition
     public GameObject pursuer;
+
+    // A reference to the animator on the players rig
+    public Animator playerAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,15 +76,17 @@ public class Player : MonoBehaviour
             
             
         }
-        if (isClimbing || controller.isGrounded)
-        {
-            canJump = true;
-            isBouncing = false;
-        }
         if (controller.isGrounded && !isBouncing)
         {
             playerVelocity.y = 0.0f;
         }
+        if (isClimbing || controller.isGrounded)
+        {
+            canJump = true;
+            isBouncing = false;
+
+        }
+        
 
 
         // Regular movment
@@ -90,12 +97,29 @@ public class Player : MonoBehaviour
             //Jump
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * Physics.gravity.y);
             canJump = false;
+
+            playerAnimator.SetBool("Jump", true);
+
             if (isClimbing)
             {
                 StopClimbing();
             }
+
         }
-        
+
+        playerAnimator.SetFloat("Falling", Mathf.Round(playerVelocity.y));
+
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            playerAnimator.SetBool("Running", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Running", false);
+
+        }
+
+
         // Is the player Climbing
         if (isClimbing)
         {
@@ -111,7 +135,18 @@ public class Player : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         // For Forces (bouncing)
         controller.Move(playerVelocity * Time.deltaTime);
-        transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X")* mouseSensitivity));
+        float rotate = 0;
+        if (Input.GetAxis("Mouse X") != 0)
+        {
+            rotate = Input.GetAxis("Mouse X") * mouseSensitivity;
+        }
+        if (Input.GetAxis("Joystick X") != 0)
+        {
+            rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
+        }
+         
+
+        transform.Rotate(new Vector3(0, rotate));
         
     }
     
@@ -141,6 +176,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.tag == "Bouncy")
         {
             isBouncing = true;
+            canJump = false;
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
         }
