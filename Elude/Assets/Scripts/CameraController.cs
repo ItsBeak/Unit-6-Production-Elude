@@ -48,8 +48,8 @@ public class CameraController : MonoBehaviour
         //Clamp the y Rotation to horizon and not flipping over at the top
         if (localRotation.y < -80f)
             localRotation.y = -80f;
-        else if (localRotation.y > 80f)
-            localRotation.y = 80f;
+        else if (localRotation.y > 30f)
+            localRotation.y = 30f;
     
         //Actual Camera Transformations
         Quaternion QT = Quaternion.Euler(localRotation.y, localRotation.x, 0);
