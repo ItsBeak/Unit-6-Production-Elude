@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
 {
-
     public SceneSwitcher switcher;
 
     private void OnTriggerEnter(Collider other)
@@ -14,5 +13,4 @@ public class WinTrigger : MonoBehaviour
             switcher.ToggleSceneChange();
         }
     }
-
 }
