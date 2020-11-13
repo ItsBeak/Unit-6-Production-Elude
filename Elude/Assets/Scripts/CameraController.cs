@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,24 +9,45 @@ public class CameraController : MonoBehaviour
     Transform parent;
     // Object camera orbits
     public GameObject player;
+    public GameObject pursuer;
     // Rotation for camera
     Vector3 localRotation;
     // How sensitive the mouse is
     float mouseSensitivity = 4f;
     // Modifies time taken to go from a to b
     public float orbitDampening = 10f;
-
+    public GameObject transitionPoint;
+    public bool doorOpening;
+    float timer;
+    
 
     // Use this for initialization
     void Start()
     {
         mouseSensitivity = player.GetComponent<Player>().mouseSensitivity;
         parent = transform.parent;
+        timer = 0;
     }
 
 
     void LateUpdate()
     {
+        if (doorOpening)
+        {
+            player.GetComponent<Player>().enabled = false;
+            pursuer.GetComponent<NavMeshAgent>().enabled = false;
+            parent.position = transitionPoint.transform.position;
+            parent.rotation = transitionPoint.transform.rotation;
+            timer += Time.deltaTime;
+            if (timer > 16)
+            {
+                doorOpening = false;
+                player.GetComponent<Player>().enabled = true;
+                pursuer.GetComponent<NavMeshAgent>().enabled = true;
+            }
+            else
+                return;
+        }
         transform.parent.position = player.transform.position;
         //Rotation of the Camera based on Mouse Coordinates
         if (Input.GetAxis("Mouse X") != 0)
