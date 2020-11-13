@@ -8,24 +8,43 @@ public class CameraController : MonoBehaviour
     Transform parent;
     // Object camera orbits
     public GameObject player;
+    public GameObject pursuer;
     // Rotation for camera
     Vector3 localRotation;
     // How sensitive the mouse is
     float mouseSensitivity = 4f;
     // Modifies time taken to go from a to b
     public float orbitDampening = 10f;
-
+    public GameObject transitionPoint;
+    [HideInInspector] public bool doorOpening;
+    float timer;
 
     // Use this for initialization
     void Start()
     {
         mouseSensitivity = player.GetComponent<Player>().mouseSensitivity;
         parent = transform.parent;
+        timer = 0;
     }
 
 
     void LateUpdate()
     {
+        if (doorOpening)
+        {
+            player.GetComponent<Player>().enabled = false;
+            pursuer.GetComponent<Monster>().enabled = false;
+            transform.position = transitionPoint.transform.position;
+            transform.rotation = transitionPoint.transform.rotation;
+            timer += Time.deltaTime;
+            if (timer > 20)
+            {
+                doorOpening = false;
+                player.GetComponent<Player>().enabled = true;
+                pursuer.GetComponent<Monster>().enabled = true;
+            }
+            return;
+        }
         transform.parent.position = player.transform.position;
         //Rotation of the Camera based on Mouse Coordinates
         if (Input.GetAxis("Mouse X") != 0)

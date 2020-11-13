@@ -13,6 +13,7 @@ public class Door_Open_Anim_Script : MonoBehaviour
         if (cogsmet == true)
         {
             door.SetBool("opening", true);
+            FindObjectOfType<Camera>().GetComponent<CameraController>().doorOpening = true;
         }
     }
 }
