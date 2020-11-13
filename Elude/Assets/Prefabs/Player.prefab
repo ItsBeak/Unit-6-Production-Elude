@@ -866,7 +866,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   settingsParabola: {fileID: 0}
   pursuer: {fileID: 0}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 5337515933382375925}
 --- !u!95 &1422611716262845102
 Animator:
   serializedVersion: 3
@@ -1057,22 +1057,22 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000029653306
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
@@ -1087,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180.00002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 56c2160c02ccd7543aeb8e8238888b7b,
         type: 3}
