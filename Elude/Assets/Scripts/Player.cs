@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     public Animator playerAnimator;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,9 +85,10 @@ public class Player : MonoBehaviour
         {
             canJump = true;
             isBouncing = false;
+            playerAnimator.SetBool("Jump", false);
 
         }
-        
+
 
 
         // Regular movment
@@ -140,10 +142,10 @@ public class Player : MonoBehaviour
         {
             rotate = Input.GetAxis("Mouse X") * mouseSensitivity;
         }
-        if (Input.GetAxis("Joystick X") != 0)
-        {
-            rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
-        }
+        //if (Input.GetAxis("Joystick X") != 0)
+        //{
+        //    rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
+        //}
          
 
         transform.Rotate(new Vector3(0, rotate));

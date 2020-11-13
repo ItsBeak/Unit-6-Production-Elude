@@ -32,18 +32,18 @@ public class CameraController : MonoBehaviour
         {
             localRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
         }
-        if (Input.GetAxis("Joystick X") != 0)
-        {
-            localRotation.x += Input.GetAxis("Joystick X") * mouseSensitivity;
-        }
+        //if (Input.GetAxis("Joystick X") != 0)
+        //{
+        //    localRotation.x += Input.GetAxis("Joystick X") * mouseSensitivity;
+        //}
         if (Input.GetAxis("Mouse Y") != 0)
         {
             localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         }
-        if (Input.GetAxis("Joystick Y") != 0)
-        {
-            localRotation.y -= Input.GetAxis("Joystick Y") * mouseSensitivity;
-        }
+        //if (Input.GetAxis("Joystick Y") != 0)
+        //{
+        //    localRotation.y -= Input.GetAxis("Joystick Y") * mouseSensitivity;
+        //}
 
         //Clamp the y Rotation to horizon and not flipping over at the top
         if (localRotation.y < -80f)
