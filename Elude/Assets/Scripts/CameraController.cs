@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CameraController : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class CameraController : MonoBehaviour
     // Modifies time taken to go from a to b
     public float orbitDampening = 10f;
     public GameObject transitionPoint;
-    [HideInInspector] public bool doorOpening;
+    public bool doorOpening;
     float timer;
+    
 
     // Use this for initialization
     void Start()
@@ -33,17 +35,18 @@ public class CameraController : MonoBehaviour
         if (doorOpening)
         {
             player.GetComponent<Player>().enabled = false;
-            pursuer.GetComponent<Monster>().enabled = false;
-            transform.position = transitionPoint.transform.position;
-            transform.rotation = transitionPoint.transform.rotation;
+            pursuer.GetComponent<NavMeshAgent>().enabled = false;
+            parent.position = transitionPoint.transform.position;
+            parent.rotation = transitionPoint.transform.rotation;
             timer += Time.deltaTime;
-            if (timer > 20)
+            if (timer > 16)
             {
                 doorOpening = false;
                 player.GetComponent<Player>().enabled = true;
-                pursuer.GetComponent<Monster>().enabled = true;
+                pursuer.GetComponent<NavMeshAgent>().enabled = true;
             }
-            return;
+            else
+                return;
         }
         transform.parent.position = player.transform.position;
         //Rotation of the Camera based on Mouse Coordinates
