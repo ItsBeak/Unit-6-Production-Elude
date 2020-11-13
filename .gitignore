@@ -62,3 +62,5 @@ crashlytics-build.properties
 Elude/obj/Debug/
 
 Elude/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+
+Elude/Assets/Scenes/LevelConcept_T_Profiles.meta
