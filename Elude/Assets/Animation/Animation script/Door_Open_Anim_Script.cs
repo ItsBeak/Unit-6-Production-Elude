@@ -6,6 +6,7 @@ public class Door_Open_Anim_Script : MonoBehaviour
 {
     public bool cogsmet;
     public Animator door;
+    bool cutsceneplayed = false;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +16,12 @@ public class Door_Open_Anim_Script : MonoBehaviour
         if (cogsmet == true)
         {
             door.SetBool("opening", true);
-            FindObjectOfType<Camera>().GetComponent<CameraController>().doorOpening = true;
+            if (!cutsceneplayed)
+            {
+                FindObjectOfType<Camera>().GetComponent<CameraController>().doorOpening = true;
+                cutsceneplayed = true;
+            }
+            
         }
     }
 }
