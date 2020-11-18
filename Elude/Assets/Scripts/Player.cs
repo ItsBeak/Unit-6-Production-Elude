@@ -142,10 +142,10 @@ public class Player : MonoBehaviour
         {
             rotate = Input.GetAxis("Mouse X") * mouseSensitivity;
         }
-        //if (Input.GetAxis("Joystick X") != 0)
-        //{
-        //    rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
-        //}
+        if (Input.GetAxis("Joystick X") != 0)
+        {
+            rotate = Input.GetAxis("Joystick X") * mouseSensitivity;
+        }
          
 
         transform.Rotate(new Vector3(0, rotate));
