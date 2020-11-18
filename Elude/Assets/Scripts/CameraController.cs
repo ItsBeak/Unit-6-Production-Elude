@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour
     {
         if (doorOpening)
         {
+            player.GetComponent<Player>().playerAnimator.SetBool("Running", false);
             player.GetComponent<Player>().enabled = false;
             pursuer.GetComponent<NavMeshAgent>().enabled = false;
             parent.position = transitionPoint.transform.position;
