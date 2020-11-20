@@ -5,6 +5,9 @@ using UnityEngine;
 public class MakeGoBoing : MonoBehaviour
 {
     public int boingHeight;
+    public GameObject boing;
+    bool timerActive = false;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +16,27 @@ public class MakeGoBoing : MonoBehaviour
         //transform.localPosition = new Vector3(0, (0.1f / transform.parent.localScale.y) + transform.parent.localScale.y/2, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        if (timerActive)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                boing.GetComponent<Animator>().SetBool("Bounced", false);
+                timerActive = false;
+            }
+        }
+        else
+        {
+            timer = 1;
+        }
+    }
 
+    // Update is called once per frame
+    private void OnTriggerEnter(Collider collider)
+    {
+        boing.GetComponent<Animator>().SetBool("Bounced", true);
+        timerActive = true;
     }
 }

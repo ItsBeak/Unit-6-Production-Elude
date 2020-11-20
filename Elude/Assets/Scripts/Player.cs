@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
     // 
     void Update()
     {
+        moveDirection = Vector3.zero;
         if (PursuerIsClose())
         {
             GetComponent<SceneSwitcher>().sceneName = "LoseMenu";
@@ -88,6 +89,10 @@ public class Player : MonoBehaviour
             playerAnimator.SetBool("Jump", false);
 
         }
+        if (isBouncing)
+        {
+           playerAnimator.SetBool("Running", false);
+        }
 
 
 
@@ -118,7 +123,6 @@ public class Player : MonoBehaviour
         else
         {
             playerAnimator.SetBool("Running", false);
-
         }
 
 
@@ -181,6 +185,7 @@ public class Player : MonoBehaviour
             canJump = false;
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
+            playerAnimator.SetBool("Jump", true);
         }
         // Bounce player and lock controls
         else if (other.gameObject.tag == "Targeted Bounce")
