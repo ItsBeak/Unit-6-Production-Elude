@@ -6,6 +6,7 @@ public class MakeGoBoing : MonoBehaviour
 {
     public int boingHeight;
     public GameObject boing;
+    public GameObject particle;
     bool timerActive = false;
     float timer;
     // Start is called before the first frame update
@@ -38,5 +39,6 @@ public class MakeGoBoing : MonoBehaviour
     {
         boing.GetComponent<Animator>().SetBool("Bounced", true);
         timerActive = true;
+        particle.GetComponent<ParticleSystem>().Play();
     }
 }
