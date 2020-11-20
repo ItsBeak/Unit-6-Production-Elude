@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boingHeight: 3
+  boing: {fileID: 2303607660957295689}
 --- !u!1001 &7843550777308429632
 PrefabInstance:
   m_ObjectHideFlags: 0
