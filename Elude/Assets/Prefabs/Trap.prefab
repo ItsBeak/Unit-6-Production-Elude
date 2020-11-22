@@ -29,9 +29,29 @@ Transform:
   m_Children:
   - {fileID: 7669985326539455930}
   - {fileID: 6162844827249886685}
+  - {fileID: 8990159936038458646}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5033346550394320319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5375097886437779205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1459af7e31fe1f944b2c8fa427b59914, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7669985326464377267
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap plant
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3d91b0a26acb5a94c921cfaf84679211,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d91b0a26acb5a94c921cfaf84679211, type: 3}
 --- !u!4 &6162844827249886685 stripped
@@ -396,4 +421,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 3d91b0a26acb5a94c921cfaf84679211,
     type: 3}
   m_PrefabInstance: {fileID: 1223965870218079943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4159569151873842700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1390863599332838460}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.128
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_Name
+      value: The Trap plant Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504363720205632276, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0aada4cc83d305a409e636d6712cf229, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc0651a8e70ba6f4784f2b7ab879918f, type: 3}
+--- !u!1 &5375097886437779205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4159569151873842700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8990159936038458646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: bc0651a8e70ba6f4784f2b7ab879918f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4159569151873842700}
   m_PrefabAsset: {fileID: 0}
