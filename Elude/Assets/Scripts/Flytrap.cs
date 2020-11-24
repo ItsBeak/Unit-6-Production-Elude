@@ -24,6 +24,8 @@ public class Flytrap : MonoBehaviour
     AudioSource audioSource;
     public AudioClip clip;
 
+    public Animator trapAnim;
+
     private void Start()
     {
         timer = snapTimer;
@@ -44,6 +46,7 @@ public class Flytrap : MonoBehaviour
             {
                 timer = snapTimer;
                 isTriggered = true;
+                trapAnim.SetTrigger("Triggered");
             }
         }
     }
@@ -71,7 +74,6 @@ public class Flytrap : MonoBehaviour
             playerMesh.GetComponent<SkinnedMeshRenderer>().enabled = false;
 
             player.GetComponent<CharacterController>().enabled = false;
-
 
 
             if (fadeTimer <= 0)

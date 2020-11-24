@@ -188,6 +188,7 @@ MonoBehaviour:
   playerMesh: {fileID: 0}
   fadePanel: {fileID: 0}
   clip: {fileID: 8300000, guid: 8d88eab2dcb750e45b73d25fc782d77e, type: 3}
+  trapAnim: {fileID: 5033346550394320319}
 --- !u!82 &7669985326748409660
 AudioSource:
   m_ObjectHideFlags: 0
