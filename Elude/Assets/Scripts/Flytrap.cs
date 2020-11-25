@@ -46,7 +46,7 @@ public class Flytrap : MonoBehaviour
             {
                 timer = snapTimer;
                 isTriggered = true;
-                trapAnim.SetTrigger("Triggered");
+                trapAnim.SetBool("Triggered", true);
             }
         }
     }
@@ -65,6 +65,7 @@ public class Flytrap : MonoBehaviour
 
         if (timer <= 0) // Resets the trap when the timer runs out
         {
+            trapAnim.SetBool("Triggered", false);
             isTriggered = false;
         }
 
