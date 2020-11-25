@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
         if (controller.isGrounded && !isBouncing)
         {
             playerVelocity.y = 0.0f;
+            playerAnimator.SetBool("Bounce", false);
         }
         if (isClimbing || controller.isGrounded)
         {
@@ -186,6 +187,7 @@ public class Player : MonoBehaviour
             makeGoBoing = other.GetComponent<MakeGoBoing>();
             playerVelocity.y = Mathf.Sqrt(makeGoBoing.boingHeight * -3.0f * Physics.gravity.y);
             playerAnimator.SetBool("Jump", true);
+            playerAnimator.SetBool("Bounce", true);
         }
         // Bounce player and lock controls
         else if (other.gameObject.tag == "Targeted Bounce")
