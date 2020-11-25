@@ -17,6 +17,8 @@ public class Monster : MonoBehaviour
     private bool playerIsDead;
     //public AudioClip catchSound;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,15 @@ public class Monster : MonoBehaviour
                 }
                 
             }
+        }
+
+        if (agent.velocity.magnitude > 0)
+        {
+            anim.SetBool("Walking", true);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
         }
 
     }
