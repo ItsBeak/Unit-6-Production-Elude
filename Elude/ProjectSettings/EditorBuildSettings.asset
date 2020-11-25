@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 29f1364ea64f45448a4939ab426cd408
   - enabled: 1
+    path: Assets/Scenes/TomTestingLevel.unity
+    guid: d81717b38d2bce34bb65e93ee7c68a0f
+  - enabled: 0
     path: Assets/Scenes/LevelConcept_T.unity
     guid: 9415a72c2b7c3db4186c95505c1620a0
   - enabled: 1

@@ -200,6 +200,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elude_Raise_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
 --- !u!1 &7803316295961677631 stripped
@@ -285,6 +295,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
@@ -372,6 +392,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elude_Raise_Mesh (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
 --- !u!1 &2582710221939972594 stripped
@@ -457,6 +487,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
@@ -544,6 +584,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elude_Raise_Mesh (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
 --- !u!1 &3112236571638234680 stripped
@@ -630,6 +680,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elude_Raise_Mesh (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}
 --- !u!1 &859719515505228337 stripped
@@ -715,6 +775,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77108ae028a4f914c955e4ed1a267922, type: 3}

@@ -84,7 +84,7 @@ GameObject:
   m_Name: BOUNCY
   m_TagString: Bouncy
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5553997117513385107

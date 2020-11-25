@@ -16,7 +16,7 @@ public class Collectible : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerExit(Collider other)  // When the player enters the trigger of the collectible, the counter is increased
+    private void OnTriggerEnter(Collider other)  // When the player enters the trigger of the collectible, the counter is increased
     {                                           // by one, and the collectible is deactivated
         if (other.tag == "Player")
         {
