@@ -14,6 +14,25 @@ CapsuleCollider:
   m_Height: 2.22
   m_Direction: 1
   m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!95 &7360521060077163661
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97017979438501923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1975cee31768f24fa3166298423f07f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &505982806815706251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boingHeight: 3
-  boing: {fileID: 0}
+  boing: {fileID: 97017979438501923}
   particle: {fileID: 6454614566125288980}
 --- !u!1001 &2338031445275518136
 PrefabInstance:
