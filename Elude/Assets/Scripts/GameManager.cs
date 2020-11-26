@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     private bool isGamePaused;
     public GameObject pauseMenu;
+    public GameObject firstSelected;    
 
     public int collectibleCounter;
     public int collectibleTarget;
@@ -54,9 +56,11 @@ public class GameManager : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown("escape") || Input.GetButtonDown("joystick button 1"))     // Toggles the pause menu
+        if (Input.GetKeyDown("escape") || Input.GetKeyDown(KeyCode.Joystick1Button7))     // Toggles the pause menu
         {
             Pause();
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstSelected);
         }
 
 

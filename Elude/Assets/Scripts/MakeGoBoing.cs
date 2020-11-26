@@ -9,6 +9,9 @@ public class MakeGoBoing : MonoBehaviour
     public GameObject particle;
     bool timerActive = false;
     float timer;
+
+    public AudioSource audio;
+    public AudioClip bounce;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,5 +43,6 @@ public class MakeGoBoing : MonoBehaviour
         boing.GetComponent<Animator>().SetBool("Bounced", true);
         timerActive = true;
         particle.GetComponent<ParticleSystem>().Play();
+        audio.PlayOneShot(bounce);
     }
 }
