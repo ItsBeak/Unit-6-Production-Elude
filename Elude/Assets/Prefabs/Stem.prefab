@@ -40,7 +40,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1353801948028483307
 Transform:
@@ -135,6 +135,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -195,15 +200,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -231,6 +256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -291,15 +321,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -327,6 +377,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -387,15 +442,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -423,6 +498,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -483,15 +563,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -519,6 +619,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -579,15 +684,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -615,6 +740,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -675,15 +805,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
@@ -711,6 +861,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353801948028483307}
     m_Modifications:
+    - target: {fileID: -6581041025168474491, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -6388302488119672668, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -771,15 +926,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2994569234417419163, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_Name
       value: Elude_Raise_Mesh (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232488858435980449, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292535884062368016, guid: 77108ae028a4f914c955e4ed1a267922,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7555709344509756922, guid: 77108ae028a4f914c955e4ed1a267922,
         type: 3}

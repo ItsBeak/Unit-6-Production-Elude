@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6021938569735591950
 Transform:
@@ -51,6 +51,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6021938569735591950}
     m_Modifications:
+    - target: {fileID: -4473984409997532297, guid: 3c086e35dd79615408c9437219c1f351,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3c086e35dd79615408c9437219c1f351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,6 +115,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_Prop_Redux
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3c086e35dd79615408c9437219c1f351,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386662455036502142, guid: 3c086e35dd79615408c9437219c1f351,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c086e35dd79615408c9437219c1f351, type: 3}
