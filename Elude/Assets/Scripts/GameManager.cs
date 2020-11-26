@@ -58,9 +58,10 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown("escape") || Input.GetKeyDown(KeyCode.Joystick1Button7))     // Toggles the pause menu
         {
-            Pause();
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(firstSelected);
+            Pause();
+            
         }
 
 
