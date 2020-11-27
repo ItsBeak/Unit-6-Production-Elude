@@ -860,7 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 1
   climbSpeed: 6
-  playerSpeed: 6
+  playerSpeed: 6.2
   mouseSensitivity: 2
   deathRange: 0
   moveDirection: {x: 0, y: 0, z: 0}

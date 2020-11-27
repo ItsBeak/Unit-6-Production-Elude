@@ -63,7 +63,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 3.8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -107,6 +107,7 @@ MonoBehaviour:
   attackRange: 2
   agent: {fileID: 6464748703318663901}
   switcher: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1001 &8296349978800609662
 PrefabInstance:
   m_ObjectHideFlags: 0
