@@ -20,7 +20,7 @@ AnimatorStateMachine:
     m_Position: {x: 460, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8130684481875988033}
-    m_Position: {x: 210, y: 220, z: 0}
+    m_Position: {x: 230, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3348959056805346119}
     m_Position: {x: 700, y: 200, z: 0}
@@ -55,7 +55,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: f473d7c617b979247b3f9e886e264ffb,
+  m_Motion: {fileID: 1827226128182048838, guid: 3e46df6804e2d5b42a3cc7e0ad57a460,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -110,7 +110,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: 6b9d1e374f7edbd4d9f9503fb425e0ae,
+  m_Motion: {fileID: 1827226128182048838, guid: 9146f52617e6d9b4088dede2ac11a122,
     type: 3}
   m_Tag: 
   m_SpeedParameter: Falling
