@@ -11,8 +11,6 @@ public class Door_Open_Anim_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-            cogsmet = true;
         if (cogsmet == true)
         {
             door.SetBool("opening", true);
